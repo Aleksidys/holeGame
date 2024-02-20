@@ -1,0 +1,53 @@
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  justify-content: center; /* Горизонтальное центрирование */
+  align-items: center; /* Вертикальное центрирование */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  grid-template-rows: repeat(4, 120px);
+  gap: 15px;
+  position: relative;
+}
+
+.item {
+  background-color: #c0baba;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+
+.target {
+  width: 130px;
+  height: 130px;
+  background-image: url('goblin.png');
+  background-size: cover;
+}
+
+.counter {
+  position: absolute;
+  top: 25%; /* Положение от верхней границы на 50% высоты .container */
+  left: 50%; /* Положение от левой границы на 50% ширины .container */
+  transform: translate(-50%, -50%); /* Центрирование относительно себя */
+  z-index: 1;
+  text-align: center; /* Центрирование текста внутри .counter */
+  background-color: #f0f0f0; /* Цвет фона .counter */
+  padding: 10px; /* Добавлен отступ для улучшенного вида */
+}
+
+.failCounter{
+  position: absolute;
+  bottom: 25%; /* Положение от нижней границы на 25% высоты .container */
+  left: 50%; /* Положение от левой границы на 50% ширины .container */
+  transform: translate(-50%, 50%); /* Центрирование относительно себя */
+  z-index: 1;
+  text-align: center; /* Центрирование текста внутри .failCounter */
+  background-color: #f0f0f0; /* Цвет фона .failCounter */
+  padding: 10px; /* Добавлен отступ для улучшенного вида */ 
+}
+
+
